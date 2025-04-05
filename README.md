@@ -2,7 +2,7 @@
 an example of Producer and Consumer problem
 
 ## Project Structure
-**Producer-Comsumer-Problem**
+**Producer-Comsumer-Problem**<br>
 *README.md*<br>
 *buffer.h/buffer.c* - define/implement buffer structure/functions and signals<br>
 *procsyn.c* - main fuction of the project && producer/consumer implementation<br>
