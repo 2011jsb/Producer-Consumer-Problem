@@ -3,16 +3,20 @@
 #include "string.h"
 #include "time.h"
 
+#include "utils.h"
+#include "buffer.h"
+
 #ifdef __linux__
 #include "pthread.h"
 #include "semaphore.h"
 #include "unistd.h"
+#define TMLEN linux_tmlen
+
 #elif _WIN32
 #include "windows.h"
+#define sleep(A) Sleep(A)
+#define TMLEN win_tmlen
 #endif
-
-#include "buffer.h"
-#include "utils.h"
 
 // producer 
 void *producer(){
@@ -21,7 +25,7 @@ void *producer(){
     while (true){
         srand((unsigned int)time(NULL));
 
-        sleep(rand() % 10 + 1);
+        sleep((rand() % 10 + 1) * TMLEN);
 
         item = rand();
         
@@ -40,7 +44,7 @@ void *consumer(){
     while (true){
         srand((unsigned int)time(NULL) * 1000);
 
-        sleep(rand() % 10 + 1);
+        sleep((rand() % 10 + 1) * TMLEN);
 
         if(remove_item(&item))
             perror("consumer report error condition");
@@ -86,7 +90,21 @@ int main(int argc, char **argv){
 
     sleep(stime);
 
+    close_sems();
+
 #elif _WIN32
+
+// create procducer procs
+for(int i = 0; i < pnums; ++i)
+    CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)producer, NULL, 0, NULL);
+
+// create comsumer
+for(int i = 0; i < cnums; ++i)
+    CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)consumer, NULL, 0, NULL);
+
+sleep(stime * TMLEN);
+
+close_sems();
 
 #endif
 

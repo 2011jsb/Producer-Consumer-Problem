@@ -7,9 +7,13 @@
 // init buffer
 void buffer_init();
 
+// close segms
+void close_sems();
+
 // insert item into buffer
 int insert_item(buffer_item item);
 
 // remove an object from buffer
 int remove_item(buffer_item *item);
+
 #endif
