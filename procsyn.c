@@ -8,7 +8,6 @@
 
 #ifdef __linux__
 #include "pthread.h"
-#include "semaphore.h"
 #include "unistd.h"
 #define TMLEN linux_tmlen
 
