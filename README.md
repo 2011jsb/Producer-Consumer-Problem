@@ -1,2 +1,2 @@
-# Producer-Comsumer-Problem
-an example of Producer and Comsumer problem
+# Producer-Consumer-Problem
+an example of Producer and Consumer problem
