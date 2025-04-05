@@ -4,6 +4,7 @@ an example of Producer and Consumer problem
 ## Project Structure
 **Producer-Comsumer-Problem**<br>
 *README.md*<br>
+*utils.h* - miscs/define<br>
 *buffer.h/buffer.c* - define/implement buffer structure/functions and signals<br>
 *procsyn.c* - main fuction of the project && producer/consumer implementation<br>
 *makefile* - help make this project(only support gcc && make)<br>
