@@ -56,6 +56,7 @@ void *consumer(){
 int main(int argc, char **argv){
     if(argc != 4){
         perror("Param Num Error!");
+        printf("[usage]: %s <sleep time> <producer nums> <consumer nums>", argv[0]);
         exit(EXIT_FAILURE);
     }
 

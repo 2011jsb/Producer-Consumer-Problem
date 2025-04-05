@@ -62,7 +62,6 @@ int remove_item(buffer_item *item){
 void close_sems(){
     sem_close(&empty);
     sem_close(&full);
-    pthread_mutex_destory(&mutex);
 }
 #elif _WIN32
 
