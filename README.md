@@ -30,5 +30,6 @@ Finally, you can use the *procsyn* command according to the following usage:<br>
 `[usage:] ./FileDir/procsyn <sleep time> <producer nums> <consumer nums>`<br>
 
 ## NOTES
-***1.*This project is an example that addresses the producer-consumer problem, implemented based on the requirements specified on pages 236-241 of *Operating System Concepts, Tenth Edition*.**<br>
-***2.*Due to the author's limited level, some parts of the code may have defects in terms of efficiency and security, and is provided solely as an example for reference.**<br>
+***1.* This project is an example that addresses the producer-consumer problem, implemented based on the requirements specified on pages 236-241 of *Operating System Concepts, Tenth Edition*.**<br>
+***2.* Due to the author's limited level, some parts of the code may have defects in terms of efficiency and security, and is provided solely as an example for reference.**<br>
+***3.*** **If you identify any problems in the project, feel free to provide feedback.**
